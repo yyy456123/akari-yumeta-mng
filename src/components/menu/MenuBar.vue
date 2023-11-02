@@ -30,7 +30,7 @@ const menuItems = [
         <component class="el-icon" :is="item.icon"></component>
         <span>{{ item.title }}</span>
       </el-menu-item>
-      <el-sub-menu v-else :index="index">
+      <el-sub-menu v-else :index="index + ''">
         <template #title>
           <component class="el-icon" :is="item.icon"></component>
           <span>{{ item.title }}</span>

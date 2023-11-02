@@ -7,6 +7,9 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    BaseTemplate: typeof import('./src/components/echarts/BaseTemplate.vue')['default']
+    Donation: typeof import('./src/components/echarts/Donation.vue')['default']
+    DonationCount: typeof import('./src/components/echarts/DonationCount.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCheckbox: typeof import('element-plus/es')['ElCheckbox']
@@ -24,5 +27,11 @@ declare module 'vue' {
     MenuBar: typeof import('./src/components/menu/MenuBar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SexRatio: typeof import('./src/components/echarts/SexRatio.vue')['default']
+    SexRatioComponent: typeof import('./src/components/echarts/SexRatioComponent.vue')['default']
+    TestPage: typeof import('./src/components/echarts/TestPage.vue')['default']
+    UserCount: typeof import('./src/components/echarts/UserCount.vue')['default']
+    UserNum: typeof import('./src/components/echarts/UserNum.vue')['default']
+    VisitRecord: typeof import('./src/components/echarts/VisitRecord.vue')['default']
   }
 }
