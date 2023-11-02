@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
+import router from '@/router'
 const loginForm = ref({
   username: '',
   password: ''
@@ -14,6 +15,10 @@ const rules = reactive({
     { min: 3, max: 5, message: '密码长度为?', trigger: 'blur' }
   ]
 })
+const login = () => {
+  // TODO:完成登录逻辑
+  router.push('/')
+}
 </script>
 
 <template>
@@ -49,7 +54,9 @@ const rules = reactive({
       <el-checkbox>记住密码</el-checkbox>
       <el-link type="primary" :underline="false">忘记密码？</el-link>
     </div>
-    <el-button class="button" auto-insert-space type="primary">登录</el-button>
+    <el-button class="button" auto-insert-space type="primary" @click="login"
+      >登录</el-button
+    >
   </div>
 </template>
 
