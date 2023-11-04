@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     BaseTemplate: typeof import('./src/components/echarts/BaseTemplate.vue')['default']
+    DataStatisticsComponent: typeof import('./src/components/data/DataStatisticsComponent.vue')['default']
     Donation: typeof import('./src/components/echarts/Donation.vue')['default']
     DonationCount: typeof import('./src/components/echarts/DonationCount.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
