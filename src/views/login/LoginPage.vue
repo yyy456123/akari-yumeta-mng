@@ -35,7 +35,7 @@ const login = () => {
       <el-form-item prop="username">
         <el-input
           prefix-icon="User"
-          v-model="loginForm.username"
+          v-model.trim="loginForm.username"
           placeholder="请输入用户名"
           clearable
         />
@@ -43,7 +43,7 @@ const login = () => {
       <el-form-item prop="password">
         <el-input
           prefix-icon="Lock"
-          v-model="loginForm.password"
+          v-model.trim="loginForm.password"
           type="password"
           placeholder="请输入密码"
           clearable
