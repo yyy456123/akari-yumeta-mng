@@ -1,41 +1,63 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="container-layout">
+  <div>
     <el-container>
-      <el-aside width="200px">
-        <img class="logo" src="../../assets/logo.png" alt="logo" />
-        <hr />
-        <menu-bar></menu-bar>
-      </el-aside>
-      <el-container>
-        <el-header class="header"
-          ><h1 class="title">明光筑梦-后台管理系统</h1></el-header
-        >
-        <el-main>
-          <hr />
-          <router-view></router-view>
-        </el-main>
+      <el-header class="header">
+        <div class="flex">
+          <div class="flex">
+            <img class="logo" src="../../assets/logo.png" alt="logo" />
+            <div class="project-name">明光筑梦</div>
+          </div>
+          <h1 class="title">后台管理系统</h1>
+        </div>
+      </el-header>
 
-        <el-footer
-          ><hr />
-          <div>Footer</div>
-        </el-footer>
+      <el-container>
+        <el-aside width="200px">
+          <menu-bar></menu-bar>
+        </el-aside>
+
+        <el-container>
+          <el-main>
+            <router-view></router-view>
+          </el-main>
+          <el-footer class="footer"
+            >Copyright &copy;
+            <a href="https://github.com/nanoyou">nanoyou</a>
+          </el-footer>
+        </el-container>
       </el-container>
     </el-container>
   </div>
 </template>
 
 <style scoped>
+.footer {
+  margin-top: 10px;
+  text-align: center;
+}
+.project-name {
+  margin-left: 12px;
+  font-weight: 700;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
 .header {
-  height: 120px;
+  border-bottom: 1px solid #f4f4f4;
+  /* background-color: skyblue; */
+  /* mar */
+  /* height: 120px; */
 }
 .logo {
-  width: 150px;
-  height: 150px;
+  width: 50px;
+  height: 50px;
 }
 .title {
-  text-align: center;
-  font-size: 48px;
+  /* text-align: center; */
+  margin-left: 80px;
+  font-size: 22px;
 }
 </style>
