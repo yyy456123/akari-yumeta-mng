@@ -146,4 +146,53 @@ const cancelCreateTask = () => {
 
 <style scoped>
 /* 样式定义 */
+.table {
+  display: flex;
+  justify-content: center;
+}
+
+.cover {
+  width: 50px;
+  height: 50px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.pagination {
+  display: flex;
+  margin-top: 25px;
+  justify-content: center;
+}
+
+.news-cover {
+  width: 200px;
+  height: 200px;
+}
+
+.form-container {
+  width: 100%;
+}
+
+.editor {
+  width: 100%;
+}
+
+.ql-editor {
+  min-height: 200px;
+}
+
+.button {
+  padding-left: 50px;
+  display: flex;
+}
+
+.publish-btn {
+  margin-right: 50px;
+}
+
+.head {
+  padding-right: 100px;
+  display: flex;
+  justify-content: space-between;
+}
 </style>
