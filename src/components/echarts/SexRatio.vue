@@ -7,6 +7,47 @@ onMounted(() => {
   var myChart = echarts.init(echartsRef.value)
   const option = {
     title: {
+      text: '用户性别比例'
+      // left: 'center'
+    },
+    tooltip: {
+      trigger: 'item'
+    },
+    legend: {
+      top: '5%',
+      left: 'center'
+    },
+    series: [
+      {
+        name: 'Access From',
+        type: 'pie',
+        radius: ['40%', '70%'],
+        avoidLabelOverlap: false,
+        label: {
+          show: false,
+          position: 'center'
+        },
+        emphasis: {
+          label: {
+            show: true,
+            fontSize: 40,
+            fontWeight: 'bold'
+          }
+        },
+        labelLine: {
+          show: false
+        },
+        data: [
+          { value: 342, name: '男' },
+          { value: 234, name: '女' },
+          { value: 36, name: '未知' }
+        ]
+      }
+    ]
+  }
+
+  const option1 = {
+    title: {
       text: '用户性别比例',
       // subtext: 'Fake Data',
       left: 'center'

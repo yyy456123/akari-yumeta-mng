@@ -24,7 +24,7 @@
           </el-main>
           <el-footer class="footer"
             >Copyright &copy;
-            <a href="https://github.com/nanoyou">nanoyou</a>
+            <a href="https://github.com/nanoyou">nanoyou实训项目组</a>
           </el-footer>
         </el-container>
       </el-container>

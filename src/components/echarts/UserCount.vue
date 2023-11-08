@@ -7,11 +7,28 @@ onMounted(() => {
   var myChart = echarts.init(echartsRef.value)
   const option = {
     title: {
-      text: '近一月用户数量变化图',
-      left: 'center'
+      text: '近一周用户数量变化'
+    },
+    tooltip: {
+      trigger: 'axis'
+    },
+    legend: {
+      data: ['儿童', '志愿者', '捐助者']
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    toolbox: {
+      feature: {
+        saveAsImage: {}
+      }
     },
     xAxis: {
       type: 'category',
+      boundaryGap: false,
       data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
     },
     yAxis: {
@@ -19,16 +36,25 @@ onMounted(() => {
     },
     series: [
       {
-        data: [820, 932, 901, 934, 1290, 1330, 1320],
+        name: '儿童',
         type: 'line',
-        smooth: true,
-        itemStyle: {
-          normal: {
-            label: {
-              show: true
-            }
-          }
-        }
+        stack: 'Total',
+        data: [120, 132, 101, 134, 90, 230, 210],
+        smooth: true
+      },
+      {
+        name: '志愿者',
+        type: 'line',
+        stack: 'Total',
+        data: [220, 182, 191, 234, 290, 330, 310],
+        smooth: true
+      },
+      {
+        name: '捐助者',
+        type: 'line',
+        stack: 'Total',
+        data: [150, 232, 201, 154, 190, 330, 410],
+        smooth: true
       }
     ]
   }

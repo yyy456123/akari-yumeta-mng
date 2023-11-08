@@ -1,6 +1,4 @@
-<script setup lang="ts">
-// 验证登录是否过期
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <router-view></router-view>
